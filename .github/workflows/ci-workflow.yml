@@ -1,0 +1,19 @@
+name: github-actions-assignment
+'on':
+  push:
+    branches: main
+jobs:
+  assignment-steps:
+    - name: checks out the repository
+      uses: actions/checkout@v3
+
+    - name: setup node
+      uses: actions/node-setups@v2
+      with:
+        node-version: 18
+    
+    - name: install dependencies
+      run: npm ci
+    
+    - name: test our file
+      run: npm test
