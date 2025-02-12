@@ -4,6 +4,7 @@ name: github-actions-assignment
     branches: main
 jobs:
   assignment-steps:
+      runs-on: ubuntu-latest
     - name: checks out the repository
       uses: actions/checkout@v3
 
